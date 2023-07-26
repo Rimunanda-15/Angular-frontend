@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" [routerLink]="['/']">Login</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+</nav>
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card border-0 shadow rounded-3 my-5">
+            <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-bold fs-5">Masuk</h5>
+              <form>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="name" id="name">
+                    <label for="floatingInput"> Name </label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" name="email" id="floatingInput">
+                  <label for="floatingInput">Email address</label>
+                </div> 
+                <div class="form-floating mb-3">
+                    <input class="form-control" type="number"name="phone" id="phone">
+                    <label for="floatingInput"> No Telepon </label>
+                </div>
+                <div class="d-grid"> 
+                  <button  class="btn btn-primary btn-login text-center fw-bold" type="submit">Masuk</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
