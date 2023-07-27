@@ -6,12 +6,12 @@ import { UserComponent } from './user.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 const routes: Routes = [
-  { path: '', component: UserdetailsComponent }
+  { path: 'userdetails', component: UserdetailsComponent }
   // Add other user-related routes here
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class UserRoutingModule {}

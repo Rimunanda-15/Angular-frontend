@@ -19,7 +19,7 @@
           <td>{{data.phone}}</td>
           <td>{{data.email}}</td>
           <td>
-            <button [routerLink]="['userdetails']" type="button" class="btn btn-primary">Lihat user</button> 
+            <button [routerLink]="['/','dashboard','user','userdetail', data.id]" type="button" class="btn btn-primary">Lihat user</button> 
           </td>
         </tr>
       </tbody>

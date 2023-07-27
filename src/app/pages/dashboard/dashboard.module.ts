@@ -7,6 +7,7 @@ import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import {HttpClientModule} from '@angular/common/http';
 import { UserService } from './user/user.service';
+import { CategoryServiceService } from './category/category-service.service';
 
 
 
@@ -23,7 +24,8 @@ import { UserService } from './user/user.service';
     HttpClientModule,
   ],
   providers: [
-    UserService
+    UserService,
+    CategoryServiceService
   ]
 })
 export class DashboardModule { }

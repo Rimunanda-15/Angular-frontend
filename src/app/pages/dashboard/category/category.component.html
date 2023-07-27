@@ -9,10 +9,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>1</td>
-          <td>Makanan</td>
+        <tr *ngFor="let data of categoryList; let i = index ">
+          <td>{{i + 1}}</td>
+          <td>{{data.id}}</td>
+          <td>{{data.name}}</td>
         </tr>
       </tbody>
     </table>
