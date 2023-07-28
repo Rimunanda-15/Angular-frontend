@@ -1,5 +1,6 @@
 <div class="container mt-3">
-    <h2>Tabel Katgori </h2>            
+    <h2>Tabel Produk </h2>    
+    <button type="button" class="btn btn-outline-primary">Tambah  Produk </button>         
     <table class="table table-bordered ">
       <thead>
         <tr>
@@ -7,26 +8,16 @@
           <th>Name</th>
           <th>Nama kategori</th>
           <th>stok</th>
+          <th> aksi </th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>pisang</td>
-          <td>makanan</td>
-          <td>200</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>pisang</td>
-            <td>makanan</td>
-            <td>200</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Handphone<td>
-            <td>Elektronik</td>
-            <td>10</td>
+        <tr *ngFor="let data of productList; let i = index ">
+          <td>{{i + 1}}</td>
+          <td>{{data.name}}</td>
+          <td>{{data.categoryName}}</td>
+          <td>{{ data.stok }}</td>
+          <td><button type="button" class="btn btn-primary"> Lihat produk </button></td>
         </tr>
       </tbody>
     </table>

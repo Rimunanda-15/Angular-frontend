@@ -1,11 +1,13 @@
 <div class="container mt-3">
-    <h2>Tabel Katgori </h2>            
+    <h2>Tabel Katgori </h2>
+    <button type="button" class="btn btn-outline-primary">Tambah  Kategori </button>          
     <table class="table table-bordered ">
       <thead>
         <tr>
           <th>No</th>
           <th>id</th>
           <th>Name</th>
+          <th> aksi </th>
         </tr>
       </thead>
       <tbody>
@@ -13,6 +15,7 @@
           <td>{{i + 1}}</td>
           <td>{{data.id}}</td>
           <td>{{data.name}}</td>
+          <td><button type="button" class="btn btn-primary"> Lihat produk </button></td>
         </tr>
       </tbody>
     </table>

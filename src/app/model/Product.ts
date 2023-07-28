@@ -1,6 +1,6 @@
-export class Category{
+export class Product{
     id!: number;
     name!: string;
-    categoryId!: number;
     stok!: string;
+    categoryName!: string;
 }

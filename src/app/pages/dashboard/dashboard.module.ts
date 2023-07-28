@@ -8,6 +8,8 @@ import { ProductComponent } from './product/product.component';
 import {HttpClientModule} from '@angular/common/http';
 import { UserService } from './user/user.service';
 import { CategoryServiceService } from './category/category-service.service';
+import { ProductService } from './product/product.service';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -22,10 +24,12 @@ import { CategoryServiceService } from './category/category-service.service';
     CommonModule,
     DashboardRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [
     UserService,
-    CategoryServiceService
+    CategoryServiceService,
+    ProductService
   ]
 })
 export class DashboardModule { }
