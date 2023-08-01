@@ -9,7 +9,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { UserService } from './user/user.service';
 import { CategoryServiceService } from './category/category-service.service';
 import { ProductService } from './product/product.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserInputComponent } from './user/user-input/user-input.component';
+import { ProductInputComponent } from './product/product-input/product-input.component';
 
 
 
@@ -18,13 +20,16 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     UserComponent,
     CategoryComponent,
-    ProductComponent
+    ProductComponent,
+    UserInputComponent,
+    ProductInputComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     UserService,

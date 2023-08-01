@@ -4,3 +4,9 @@ export class Product{
     stok!: string;
     categoryName!: string;
 }
+
+export class InputProduct{
+    name!: string;
+    stok!: string;
+    categoryId!: number;
+}

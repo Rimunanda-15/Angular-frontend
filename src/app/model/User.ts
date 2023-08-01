@@ -4,3 +4,9 @@ export class User{
     email!: string;
     phone!: string;
 }
+
+export class UserInput{
+    name!: string;
+    email!: string;
+    phone!: string;
+}

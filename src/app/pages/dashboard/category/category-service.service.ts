@@ -13,4 +13,8 @@ export class CategoryServiceService {
   findAll(){
     return this.httpclient.get<Category[]>(`${environment.api}/api/category`, {observe: "response"});
   }
+
+  findById(id:number){
+    return this.httpclient.get<Category>(`${environment.api}/api/category/${id}`, { observe: 'response' });
+  }
 }

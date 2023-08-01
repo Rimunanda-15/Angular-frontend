@@ -1,0 +1,47 @@
+<!-- <form [formGroup]="userForm">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter Your Name" formControlName = "name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="phone">Phone number input</label>
+        <input formControlName="phone" type="tel" id="phone" class="form-control"  placeholder="+62"/>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="save()">Submit</button>
+</form> -->
+
+<form [formGroup]="userForm" (ngSubmit)="save()">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter Your Name" formControlName="name">
+        <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="text-danger">
+            Name is required.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="text-danger">
+            Email is required and should be a valid email address.
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="phone">Phone number input</label>
+        <input formControlName="phone" type="tel" id="phone" class="form-control" placeholder="+62">
+        <div *ngIf="userForm.get('phone')?.invalid && userForm.get('phone')?.touched" class="text-danger">
+            Phone is required and should have at least 11 digits and maximum 12.
+        </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+

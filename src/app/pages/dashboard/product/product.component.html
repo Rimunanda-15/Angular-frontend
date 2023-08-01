@@ -1,6 +1,6 @@
 <div class="container mt-3">
     <h2>Tabel Produk </h2>    
-    <button type="button" class="btn btn-outline-primary">Tambah  Produk </button>         
+    <button type="button" class="btn btn-outline-primary" [routerLink]="['/','dashboard','product','add']">Tambah  Produk </button>         
     <table class="table table-bordered ">
       <thead>
         <tr>
@@ -22,4 +22,4 @@
       </tbody>
     </table>
   </div>
-  
+  <router-outlet></router-outlet>

@@ -5,6 +5,8 @@ import { CategoryComponent } from '../category/category.component';
 import { ProductComponent } from '../product/product.component';
 import { UserdetailsComponent } from '../user/userdetails/userdetails.component';
 import { UserFormComponent } from '../user/user-form/user-form.component';
+import { UserInputComponent } from '../user/user-input/user-input.component';
+import { ProductInputComponent } from '../product/product-input/product-input.component';
 
 const routes: Routes = 
 [
@@ -27,6 +29,10 @@ const routes: Routes =
         path: 'user/adduser',
         component: UserFormComponent
     },
+    {
+        path: 'user/add',
+        component: UserInputComponent
+    },
 
     {
         path:'category',
@@ -35,6 +41,10 @@ const routes: Routes =
     {
         path:'product',
         component: ProductComponent
+    },
+    {
+        path:'product/add',
+        component: ProductInputComponent
     }
     
 ];

@@ -2,6 +2,7 @@
     <div class="card-header py-3">
       <h5 class="mb-0">User Details </h5>
     </div>
+    <form [formGroup]="userUpdateForm" >
     <div class="form-control">
         <label class="form-control" for="formControlReadonly">Id</label>
         <input
@@ -19,9 +20,8 @@
           class="form-control"
           id="formControlReadonly"
           type="text"
-          value="{{user.name}}"
           aria-label="readonly input example"
-          readonly
+          formControlName="name"
         />
     </div>
     <div class="form-control">
@@ -30,9 +30,8 @@
           class="form-control"
           id="formControlReadonly"
           type="text"
-          value="{{user.email}}"
           aria-label="readonly input example"
-          readonly
+          formControlName="email"
         />
     </div>
     <div class="form-control">
@@ -41,12 +40,12 @@
           class="form-control"
           id="formControlReadonly"
           type="text"
-          value="{{user.phone}}"
           aria-label="readonly input example"
-          readonly
+          formControlName="phone"
         />
     </div>
+  </form>
 </div>
-<button type="button" style="margin-left: 5px;" class="btn btn-primary">Update</button>
-<button type="submit" style="margin-left: 10px;" class="btn btn-danger" (click)="onClickDelete()">Hapus</button>
+<button (click)="update()" type="button" style="margin-left: 5px;" class="btn btn-primary">Update</button>
+<button [routerLink]="['/','dashboard','user']" type="submit" style="margin-left: 10px;" class="btn btn-danger" (click)="onClickDelete()">Hapus</button>
 <router-outlet></router-outlet>
