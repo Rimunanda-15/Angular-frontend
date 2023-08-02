@@ -1,0 +1,52 @@
+<div class="card mb-4">
+    <div class="card-header py-3">
+      <h5 class="mb-0"> Product  Details </h5>
+    </div>
+    <form [formGroup]="productUpdateForm">
+    <div class="form-control">
+        <label class="form-control" for="formControlReadonly">Id</label>
+        <input
+          class="form-control"
+          id="formControlReadonly"
+          type="text"
+          value="enter"
+          aria-label="readonly input example"
+          readonly
+        />
+    </div>
+    <div class="form-control">
+        <label class="form-control" for="formControlReadonly">Product Name</label>
+        <input
+          class="form-control"
+          id="formControlReadonly"
+          type="text"
+          aria-label="readonly input example"
+          formControlName="name"
+        />
+    </div>
+    <div class="form-control">
+        <label class="form-control" for="formControlReadonly">Jenis Kategori</label>
+        <select class="form-select" name="form-select" id="categoryId" formControlName="categoryName">
+          <option value="" disabled>
+            Pilih jenis kategori
+          </option>
+          <option *ngFor="let category of categories" [value]="category.id">
+            {{ category.name }}
+          </option>
+        </select>
+    </div>
+    <div class="form-control">
+        <label class="form-control" for="formControlReadonly">Stock</label>
+        <input
+          class="form-control"
+          id="formControlReadonly"
+          type="number"
+          aria-label="readonly input example"
+          formControlName="stok"
+        />
+    </div>
+  </form>
+</div>
+<button type="button" style="margin-left: 5px;" class="btn btn-primary">Update</button>
+<button [routerLink]="['/','dashboard','product']" type="submit" style="margin-left: 10px;" class="btn btn-danger">Hapus</button>
+<router-outlet></router-outlet>

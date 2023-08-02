@@ -8,7 +8,6 @@
       <thead>
         <tr>
           <th> No </th>
-          <th> id</th>
           <th>Name</th>
           <th>Phone Number</th>
           <th>Email</th>
@@ -18,7 +17,6 @@
       <tbody>
         <tr *ngFor="let data of userList; let i = index">
           <td> {{ i + 1}} </td>
-          <td> {{data.id}} </td>
           <td> {{data.name}}  </td>
           <td>{{data.phone}}</td>
           <td>{{data.email}}</td>

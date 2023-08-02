@@ -17,7 +17,7 @@
           <td>{{data.name}}</td>
           <td>{{data.categoryName}}</td>
           <td>{{ data.stok }}</td>
-          <td><button type="button" class="btn btn-primary"> Lihat produk </button></td>
+          <td><button type="button" class="btn btn-primary" [routerLink]="['/','dashboard','product','productdetails', data.id]"> Lihat produk </button></td>
         </tr>
       </tbody>
     </table>

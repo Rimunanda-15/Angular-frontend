@@ -7,6 +7,7 @@ import { UserdetailsComponent } from '../user/userdetails/userdetails.component'
 import { UserFormComponent } from '../user/user-form/user-form.component';
 import { UserInputComponent } from '../user/user-input/user-input.component';
 import { ProductInputComponent } from '../product/product-input/product-input.component';
+import { ProductDetailsComponent } from '../product/product-details/product-details.component';
 
 const routes: Routes = 
 [
@@ -45,6 +46,10 @@ const routes: Routes =
     {
         path:'product/add',
         component: ProductInputComponent
+    },
+    {
+        path:'product/productdetails/:id',
+        component: ProductDetailsComponent
     }
     
 ];

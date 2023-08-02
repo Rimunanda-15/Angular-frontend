@@ -14,6 +14,10 @@ export class ProductService {
     return this.httpclient.get<Product[]>(`${environment.api}/api/product`, {observe: "response"});
   }
 
+  findById(id: number){
+    return this.httpclient.get<Product>(`${environment.api}/api/product/${id}`, { observe: 'response' });
+  }
+
   save(Input: InputProduct){
     return this.httpclient.post(`${environment.api}/api/product`, Input ,{observe: "response"});
   }

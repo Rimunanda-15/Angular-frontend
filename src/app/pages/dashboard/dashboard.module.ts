@@ -12,6 +12,7 @@ import { ProductService } from './product/product.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserInputComponent } from './user/user-input/user-input.component';
 import { ProductInputComponent } from './product/product-input/product-input.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
 
 
 
@@ -22,7 +23,8 @@ import { ProductInputComponent } from './product/product-input/product-input.com
     CategoryComponent,
     ProductComponent,
     UserInputComponent,
-    ProductInputComponent
+    ProductInputComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,
