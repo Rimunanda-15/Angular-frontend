@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserInputComponent } from './user/user-input/user-input.component';
 import { ProductInputComponent } from './product/product-input/product-input.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { CategoryInputComponent } from './category/category-input/category-input.component';
+import { CategoryDetailsComponent } from './category/category-details/category-details.component';
 
 
 
@@ -24,7 +26,9 @@ import { ProductDetailsComponent } from './product/product-details/product-detai
     ProductComponent,
     UserInputComponent,
     ProductInputComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CategoryInputComponent,
+    CategoryDetailsComponent
   ],
   imports: [
     CommonModule,

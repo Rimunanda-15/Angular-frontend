@@ -9,7 +9,7 @@
           class="form-control"
           id="formControlReadonly"
           type="text"
-          value="enter"
+          value="{{productId}}"
           aria-label="readonly input example"
           readonly
         />
@@ -26,7 +26,7 @@
     </div>
     <div class="form-control">
         <label class="form-control" for="formControlReadonly">Jenis Kategori</label>
-        <select class="form-select" name="form-select" id="categoryId" formControlName="categoryName">
+        <select class="form-select" name="form-select" id="categoryId" formControlName="categoryId">
           <option value="" disabled>
             Pilih jenis kategori
           </option>
@@ -47,6 +47,6 @@
     </div>
   </form>
 </div>
-<button type="button" style="margin-left: 5px;" class="btn btn-primary">Update</button>
-<button [routerLink]="['/','dashboard','product']" type="submit" style="margin-left: 10px;" class="btn btn-danger">Hapus</button>
+<button (click)="update()" type="button" style="margin-left: 5px;" class="btn btn-primary">Update</button>
+<button (click)="onClickDelete()" [routerLink]="['/','dashboard','product']" type="submit" style="margin-left: 10px;" class="btn btn-danger">Hapus</button>
 <router-outlet></router-outlet>

@@ -12,7 +12,7 @@ export class UserInputComponent implements OnInit {
   ngOnInit(): void {
     this.userForm = this.formBuilder.group({
       name: ['', Validators.required],
-      phone: ['', [Validators.required, Validators.minLength(11),Validators.maxLength(12)]],
+      phone: ['', [Validators.required, Validators.minLength(11),Validators.maxLength(13)]],
       email: ['', [Validators.required, Validators.email]],
     });
   } 
@@ -25,11 +25,13 @@ export class UserInputComponent implements OnInit {
     this.userForm.markAllAsTouched();
     console.log(this.userForm.value)
 
-    this.service.save(this.userForm.value).subscribe(resp => {
-      if (resp.status == 200) {
-        console.log('berhasil menambah user')
-        this.router.navigate(['/','dashboard','user'])
-      }
-    })
+    if (this.userForm.valid) {
+      this.service.save(this.userForm.value).subscribe(resp => {
+        if (resp.status == 200) {
+          console.log('berhasil menambah user')
+          this.router.navigate(['/','dashboard','user'])
+        }
+      })
+    }
   }
 }

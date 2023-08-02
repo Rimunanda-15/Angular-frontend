@@ -1,6 +1,6 @@
 <div class="container mt-3">
     <h2>Tabel Katgori </h2>
-    <button type="button" class="btn btn-outline-primary">Tambah  Kategori </button>          
+    <button type="button" class="btn btn-outline-primary" [routerLink]="['/','dashboard','category','add']">Tambah  Kategori </button>          
     <table class="table table-bordered ">
       <thead>
         <tr>
@@ -15,7 +15,7 @@
           <td>{{i + 1}}</td>
           <td>{{data.id}}</td>
           <td>{{data.name}}</td>
-          <td><button type="button" class="btn btn-primary"> Lihat Kategori </button></td>
+          <td><button type="button" class="btn btn-primary" [routerLink]="['/','dashboard','category','categorydetails', data.id]"> Lihat Kategori </button></td>
         </tr>
       </tbody>
     </table>

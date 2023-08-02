@@ -33,7 +33,7 @@ export class ProductDetailsComponent implements OnInit {
     this.getProduct();
     this.productUpdateForm = this.formbuilder.group({
       name: this.formbuilder.control(null),
-      categoryName: this.formbuilder.control(null),
+      categoryId: this.formbuilder.control(null),
       stok: this.formbuilder.control(null),
     })
     this.loadCategories();
@@ -56,9 +56,26 @@ export class ProductDetailsComponent implements OnInit {
       this.product = resp.body!;
       this.productUpdateForm.patchValue({
         name: this.product.name,
-        categoryName: this.product.categoryId,
+        categoryId: this.product.categoryId,
         stok: this.product.stok
       });
+    })
+  }
+
+  onClickDelete(){
+    this.service.delete(this.productId).subscribe(resp =>{
+      alert('berhasil menghapus user');
+      this.router.navigate(['/','dashboard','product']);
+    })
+  }
+
+  update(){
+    console.log(this.productUpdateForm.value);
+    this.service.update(this.product.id,this.productUpdateForm.value).subscribe( resp => {
+      if (resp.status == 200) {
+        alert('product update berhasil')
+        this.router.navigate(['/','dashboard','product']);
+      }
     })
   }
 

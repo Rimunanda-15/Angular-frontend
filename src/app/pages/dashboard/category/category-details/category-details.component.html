@@ -1,0 +1,31 @@
+<div class="card mb-4">
+    <div class="card-header py-3">
+      <h5 class="mb-0">Category Details </h5>
+    </div>
+    <form [formGroup]="categoryUpdateForm" >
+    <div class="form-control">
+        <label class="form-control" for="formControlReadonly">Id</label>
+        <input
+          class="form-control"
+          id="formControlReadonly"
+          type="text"
+          value="{{categoryId}}"
+          aria-label="readonly input example"
+          readonly
+        />
+    </div>
+    <div class="form-control">
+        <label class="form-control" for="formControlReadonly">Name</label>
+        <input
+          class="form-control"
+          id="formControlReadonly"
+          type="text"
+          aria-label="readonly input example"
+          formControlName="name"
+        />
+    </div>
+  </form>
+</div>
+<button (click)="update()" type="button" style="margin-left: 5px;" class="btn btn-primary">Update</button>
+<button [routerLink]="['/','dashboard','category']" type="submit" style="margin-left: 10px;" class="btn btn-danger" (click)="onClickDelete()">Hapus</button>
+<router-outlet></router-outlet>

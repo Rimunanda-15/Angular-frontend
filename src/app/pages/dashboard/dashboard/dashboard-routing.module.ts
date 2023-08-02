@@ -8,6 +8,8 @@ import { UserFormComponent } from '../user/user-form/user-form.component';
 import { UserInputComponent } from '../user/user-input/user-input.component';
 import { ProductInputComponent } from '../product/product-input/product-input.component';
 import { ProductDetailsComponent } from '../product/product-details/product-details.component';
+import { CategoryInputComponent } from '../category/category-input/category-input.component';
+import { CategoryDetailsComponent } from '../category/category-details/category-details.component';
 
 const routes: Routes = 
 [
@@ -38,6 +40,15 @@ const routes: Routes =
     {
         path:'category',
         component: CategoryComponent
+    },
+    {
+        path: 'category/add',
+        component: CategoryInputComponent
+    },
+    {
+        path: 'category/categorydetails/:id',
+        component: CategoryDetailsComponent
+
     },
     {
         path:'product',
